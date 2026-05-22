@@ -6,7 +6,7 @@ export interface AuthenticatedUser {
 }
 
 // Augment Express Request to carry the authenticated user
-declare module 'express-serve-static-core' {
+declare module 'express' {
   interface Request {
     user?: AuthenticatedUser
   }
