@@ -40,6 +40,7 @@ Exécuter dans l'ordre :
 6. **Préparer le titre et le body de la PR**
 
    Body :
+
    ```
    ## Summary
    <liste des changements principaux>
@@ -63,7 +64,7 @@ Exécuter dans l'ordre :
    - Ajouter `domain: devops` si fichiers dans `.github/`
    - Ajouter `domain: shared` si fichiers dans `packages/`
 
-8. **Créer la PR via mcp__github__create_pull_request**
+8. **Créer la PR via mcp**github**create_pull_request**
    - owner et repo lus depuis MEMORY.md
    - assignees: [owner]
    - reviewers: [owner]

@@ -5,12 +5,12 @@
 
 ## Tech Stack
 
-| Layer | Technology | Why |
-|---|---|---|
-| Frontend | Next.js 15 | App Router, SSR, TypeScript |
-| Backend | Express | Lightweight, TypeScript native |
-| Database | Supabase | PostgreSQL + Auth + Storage |
-| Monorepo | Turborepo | Build caching, workspace management |
+| Layer    | Technology | Why                                 |
+| -------- | ---------- | ----------------------------------- |
+| Frontend | Next.js 15 | App Router, SSR, TypeScript         |
+| Backend  | Express    | Lightweight, TypeScript native      |
+| Database | Supabase   | PostgreSQL + Auth + Storage         |
+| Monorepo | Turborepo  | Build caching, workspace management |
 
 ## Data Model
 

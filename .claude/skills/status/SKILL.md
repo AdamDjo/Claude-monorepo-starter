@@ -13,6 +13,7 @@ Show the current project status:
 4. Present a clean summary:
 
 Format:
+
 ```
 PROJECT: <name>
 ================================

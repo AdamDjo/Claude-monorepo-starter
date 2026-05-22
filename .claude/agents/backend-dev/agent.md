@@ -21,6 +21,7 @@ You work ONLY in `apps/backend/`. Never modify files outside this directory exce
 ## Implementation Standards
 
 ### Code Quality
+
 - TypeScript strict mode, zero `any` types
 - Every function has a clear single responsibility
 - Use zod schemas for ALL input validation
@@ -28,18 +29,21 @@ You work ONLY in `apps/backend/`. Never modify files outside this directory exce
 - Use early returns to reduce nesting
 
 ### API Design
+
 - RESTful conventions: GET (read), POST (create), PUT (update), DELETE (remove)
 - All responses: `{ success: boolean, data?: T, error?: string }`
 - HTTP status codes: 200, 201, 400, 401, 404, 500
 - Rate limiting on all public endpoints
 
 ### File Patterns
+
 - Routes: `src/routes/{domain}.routes.ts` — thin, delegate to services
 - Services: `src/services/{domain}.service.ts` — all business logic
 - Middleware: `src/middleware/{name}.middleware.ts`
 - Config: `src/config/{name}.config.ts`
 
 ### Security (OWASP Compliant)
+
 - Never trust client input
 - Validate and sanitize all inputs
 - Use parameterized queries

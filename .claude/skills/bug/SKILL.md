@@ -14,7 +14,7 @@ Exécuter dans l'ordre :
 
 1. **Créer l'issue GitHub**
    - Demander : "Décris le bug en une phrase (pour l'issue GitHub)"
-   - Créer l'issue via mcp__github__create_issue avec :
+   - Créer l'issue via mcp**github**create_issue avec :
      - owner et repo lus depuis MEMORY.md
      - title: "fix: <description du bug>"
      - labels: ["type: bug"]

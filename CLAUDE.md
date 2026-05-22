@@ -43,6 +43,7 @@ When the user types **"go new-project"**, run this checklist sequentially:
    - Push `develop` to remote
 
 5. **Confirm with summary:**
+
    ```
    ✅ Project initialized: <name>
    ✅ docs/PRODUCT_DESIGN.md generated
@@ -79,6 +80,7 @@ Default scope: `@starter/*`
 **Root:** Turborepo, pnpm, Husky, commitlint, lint-staged, Knip
 
 **Both apps:**
+
 - `zod` — validation, framework-agnostic
 - `@<scope>/eslint-config` + `@<scope>/prettier-config` — linting/formatting
 - `typescript`, `eslint`, `prettier`
@@ -222,32 +224,32 @@ release/<semver>
 
 ### Labels (created by setup-github.sh)
 
-| Label | Usage |
-|---|---|
-| `type: feature` | New feature |
-| `type: bug` | Bug fix |
-| `type: chore` | Maintenance |
-| `type: docs` | Documentation |
-| `type: release` | Release PR |
-| `priority: high` | Must fix this sprint |
-| `priority: medium` | This week |
-| `priority: low` | Backlog |
-| `domain: frontend` | `apps/frontend/` |
-| `domain: backend` | `apps/backend/` |
-| `domain: shared` | `packages/shared/` |
-| `domain: devops` | `.github/`, CI |
-| `phase: 1` | Foundation |
-| `phase: 2` | MVP |
-| `phase: 3` | Polish |
-| `status: blocked` | Blocked by dependency |
+| Label              | Usage                 |
+| ------------------ | --------------------- |
+| `type: feature`    | New feature           |
+| `type: bug`        | Bug fix               |
+| `type: chore`      | Maintenance           |
+| `type: docs`       | Documentation         |
+| `type: release`    | Release PR            |
+| `priority: high`   | Must fix this sprint  |
+| `priority: medium` | This week             |
+| `priority: low`    | Backlog               |
+| `domain: frontend` | `apps/frontend/`      |
+| `domain: backend`  | `apps/backend/`       |
+| `domain: shared`   | `packages/shared/`    |
+| `domain: devops`   | `.github/`, CI        |
+| `phase: 1`         | Foundation            |
+| `phase: 2`         | MVP                   |
+| `phase: 3`         | Polish                |
+| `status: blocked`  | Blocked by dependency |
 
 ### Milestones
 
-| Milestone | Goal |
-|---|---|
+| Milestone            | Goal                      |
+| -------------------- | ------------------------- |
 | Phase 1 — Foundation | Core infrastructure ready |
-| Phase 2 — MVP | Fully working product |
-| Phase 3 — Polish | Production-ready |
+| Phase 2 — MVP        | Fully working product     |
+| Phase 3 — Polish     | Production-ready          |
 
 ## Agent Workflow
 

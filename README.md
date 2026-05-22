@@ -99,6 +99,7 @@ To generate a token: GitHub → Settings → Developer settings → Personal acc
 Open Claude Code in the project folder.
 
 **In the terminal:**
+
 ```bash
 claude
 ```
@@ -113,17 +114,17 @@ go new-project
 
 Claude will ask you questions one by one:
 
-| Question | Example answer |
-|---|---|
-| Project name | `MyApp` |
-| Short description | `A SaaS for managing invoices` |
-| Main feature / purpose | `Let freelancers send invoices and get paid online` |
-| Frontend stack | `Next.js 15` (default) or `React+Vite`, `Remix`, `SvelteKit`... |
-| Backend stack | `Express` (default) or `NestJS`, `FastAPI`, `Hono`, `tRPC`... |
-| Database | `Supabase` (default) or `Postgres+Prisma`, `MongoDB`, `SQLite`... |
-| AI integration | `Claude + OpenAI` or `none` |
-| GitHub username/repo | `myname/myapp` |
-| npm scope | `@myapp` (replaces `@starter` everywhere) |
+| Question               | Example answer                                                    |
+| ---------------------- | ----------------------------------------------------------------- |
+| Project name           | `MyApp`                                                           |
+| Short description      | `A SaaS for managing invoices`                                    |
+| Main feature / purpose | `Let freelancers send invoices and get paid online`               |
+| Frontend stack         | `Next.js 15` (default) or `React+Vite`, `Remix`, `SvelteKit`...   |
+| Backend stack          | `Express` (default) or `NestJS`, `FastAPI`, `Hono`, `tRPC`...     |
+| Database               | `Supabase` (default) or `Postgres+Prisma`, `MongoDB`, `SQLite`... |
+| AI integration         | `Claude + OpenAI` or `none`                                       |
+| GitHub username/repo   | `myname/myapp`                                                    |
+| npm scope              | `@myapp` (replaces `@starter` everywhere)                         |
 
 After you answer, Claude automatically:
 
@@ -181,14 +182,14 @@ Creates `release/1.0.0`, triggers CI, creates the GitHub Release and tag automat
 
 ### Other commands
 
-| Command | What it does |
-|---|---|
-| `/hotfix <name>` | Urgent fix from `main` |
-| `/sync` | Sync `develop` with `main` after hotfix/release |
-| `/implement <description>` | Full implementation workflow (plan → code → verify) |
-| `/status` | Show current phase, next tasks, recent commits |
-| `/check` | Run type-check + lint across the whole monorepo |
-| `/docs` | Update `MEMORY.md` + `ARCHITECTURE.md` from current code |
+| Command                    | What it does                                             |
+| -------------------------- | -------------------------------------------------------- |
+| `/hotfix <name>`           | Urgent fix from `main`                                   |
+| `/sync`                    | Sync `develop` with `main` after hotfix/release          |
+| `/implement <description>` | Full implementation workflow (plan → code → verify)      |
+| `/status`                  | Show current phase, next tasks, recent commits           |
+| `/check`                   | Run type-check + lint across the whole monorepo          |
+| `/docs`                    | Update `MEMORY.md` + `ARCHITECTURE.md` from current code |
 
 ---
 
@@ -239,22 +240,22 @@ pnpm knip                   # Find unused exports and dead code
 
 ## What's included
 
-| Category | Tool | Why |
-|---|---|---|
-| Monorepo | Turborepo + pnpm | Fast builds, workspace management |
-| Frontend | Next.js 15, React 19, Tailwind CSS 4 | App Router, SSR, TypeScript |
-| Backend | Express, Zod | Lightweight, typed, validated |
-| Database | Supabase | PostgreSQL + Auth + Storage out of the box |
-| Linting | ESLint v9 + Prettier | Shared flat configs across all workspaces |
-| Testing | Vitest + Cypress | Unit + E2E, coverage reports |
-| Git hooks | Husky + commitlint | Enforces conventional commits, blocks `Co-Authored-By Claude` |
-| CI | GitHub Actions | Lint, type-check, test, build on every PR |
-| PR automation | labeler + milestone workflow | Auto-assigns labels and milestones by branch name |
-| Releases | release.yml | Creates tag + GitHub Release from `release/*` branches |
-| Security | CodeQL | Weekly static analysis |
-| Deps | Renovate | Auto-merges patch/minor, groups by domain |
-| Docker | Multi-stage builds | Optimized images for frontend (standalone) and backend |
-| AI-assisted dev | Claude Code agents + skills | Speeds up the entire development cycle |
+| Category        | Tool                                 | Why                                                           |
+| --------------- | ------------------------------------ | ------------------------------------------------------------- |
+| Monorepo        | Turborepo + pnpm                     | Fast builds, workspace management                             |
+| Frontend        | Next.js 15, React 19, Tailwind CSS 4 | App Router, SSR, TypeScript                                   |
+| Backend         | Express, Zod                         | Lightweight, typed, validated                                 |
+| Database        | Supabase                             | PostgreSQL + Auth + Storage out of the box                    |
+| Linting         | ESLint v9 + Prettier                 | Shared flat configs across all workspaces                     |
+| Testing         | Vitest + Cypress                     | Unit + E2E, coverage reports                                  |
+| Git hooks       | Husky + commitlint                   | Enforces conventional commits, blocks `Co-Authored-By Claude` |
+| CI              | GitHub Actions                       | Lint, type-check, test, build on every PR                     |
+| PR automation   | labeler + milestone workflow         | Auto-assigns labels and milestones by branch name             |
+| Releases        | release.yml                          | Creates tag + GitHub Release from `release/*` branches        |
+| Security        | CodeQL                               | Weekly static analysis                                        |
+| Deps            | Renovate                             | Auto-merges patch/minor, groups by domain                     |
+| Docker          | Multi-stage builds                   | Optimized images for frontend (standalone) and backend        |
+| AI-assisted dev | Claude Code agents + skills          | Speeds up the entire development cycle                        |
 
 ---
 

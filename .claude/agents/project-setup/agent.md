@@ -33,6 +33,7 @@ Based on the answers, edit `apps/frontend/package.json` and `apps/backend/packag
 ### Frontend deps — what to keep vs replace
 
 **Universal (always keep regardless of framework):**
+
 - `@<scope>/shared`, `@<scope>/eslint-config`, `@<scope>/prettier-config`
 - `zod`, `typescript`
 - `vitest`, `@vitejs/plugin-react` (or equivalent), `@vitest/coverage-v8`, `@vitest/ui`
@@ -40,6 +41,7 @@ Based on the answers, edit `apps/frontend/package.json` and `apps/backend/packag
 - `eslint`, `prettier`
 
 **If Next.js 15 (default — keep as-is):**
+
 - Keep everything in the current `package.json`
 - Keep `next`, `react`, `react-dom`, `tailwindcss`, `@tailwindcss/postcss`
 - Keep `eslint-config-next`, `eslint-plugin-react-hooks`, `@next/bundle-analyzer`
@@ -49,6 +51,7 @@ Based on the answers, edit `apps/frontend/package.json` and `apps/backend/packag
 - Update scripts: keep `dev: "next dev"`, `build: "next build"`, etc.
 
 **If React + Vite:**
+
 - Remove: `next`, `eslint-config-next`, `@next/bundle-analyzer`, `postcss`
 - Keep: `react`, `react-dom`, `tailwindcss` (install vite plugin), `zustand`, `@tanstack/react-query`, `axios`, `react-hook-form`, `lucide-react`, `framer-motion`
 - Add: `vite`, `@vitejs/plugin-react`, `vite-plugin-tailwindcss` (or equivalent)
@@ -56,74 +59,88 @@ Based on the answers, edit `apps/frontend/package.json` and `apps/backend/packag
 - Create `vite.config.ts` instead of `next.config.ts`
 
 **If Remix:**
+
 - Remove: `next`, `eslint-config-next`, `@next/bundle-analyzer`, `zustand`, `@tanstack/react-query`
 - Add: `@remix-run/node`, `@remix-run/react`, `@remix-run/serve`
 - Update scripts accordingly
 
 **If SvelteKit:**
+
 - Remove all React deps, Next.js deps
 - Add: `@sveltejs/kit`, `svelte`, `vite`
 - Update ESLint config to use a Svelte-compatible config
 
 **If none (API-only or other):**
+
 - Remove the entire `apps/frontend/` directory or leave as empty placeholder
 - Warn the user they'll need to configure it manually
 
 ### Backend deps — what to keep vs replace
 
 **Universal (always keep):**
+
 - `@<scope>/shared`, `@<scope>/eslint-config`, `@<scope>/prettier-config`
 - `zod`, `dotenv`, `typescript`
 - `vitest`, `@vitest/coverage-v8`
 - `eslint`, `prettier`, `tsx`
 
 **If Express (default — keep as-is):**
+
 - Keep everything: `express`, `express-rate-limit`, `cors`
 - Keep `@types/express`, `@types/cors`, `@types/node`
 
 **If NestJS:**
+
 - Remove: `express`, `express-rate-limit`, `cors`, `@types/express`, `@types/cors`, `tsx`
 - Add: `@nestjs/core`, `@nestjs/common`, `@nestjs/platform-express`, `reflect-metadata`, `rxjs`
 - Add devDeps: `@nestjs/cli`, `@nestjs/testing`, `ts-node`
 - Update scripts: `dev: "nest start --watch"`, `build: "nest build"`
 
 **If FastAPI / Python:**
+
 - Remove the entire `apps/backend/` directory
 - Warn the user this is a Python backend — provide a minimal FastAPI `requirements.txt` as a starting point
 - The monorepo structure won't apply to Python; suggest keeping it as a separate service
 
 **If Hono:**
+
 - Remove: `express`, `express-rate-limit`, `@types/express`
 - Add: `hono`
 - Keep `cors` approach via Hono middleware
 - Update scripts if needed
 
 **If tRPC:**
+
 - Keep Express as the transport layer
 - Add: `@trpc/server`, `@trpc/client`
 
 **If none:**
+
 - Remove the entire `apps/backend/` directory or leave as placeholder
 
 ### Database deps — what to add
 
 **If Supabase (default — already in package.json):**
+
 - Keep `@supabase/supabase-js` in both frontend and backend
 - Keep `.env.example` as-is
 
 **If Postgres + Prisma:**
+
 - Remove `@supabase/supabase-js` from both apps
 - Add to backend: `@prisma/client`, `prisma` (devDep)
 - Run: `pnpm --filter backend exec prisma init`
 - Update `apps/backend/.env.example` with `DATABASE_URL`
 
 **If MongoDB:**
+
 - Remove `@supabase/supabase-js`
 - Add to backend: `mongoose`
 - Add devDep: `@types/mongoose`
 - Update `.env.example` with `MONGODB_URI`
 
 **If SQLite:**
+
 - Remove `@supabase/supabase-js`
 - Add to backend: `better-sqlite3` or `@libsql/client` (Turso)
 - Update `.env.example` accordingly
@@ -131,15 +148,19 @@ Based on the answers, edit `apps/frontend/package.json` and `apps/backend/packag
 ### AI deps — what to add
 
 **If OpenAI:**
+
 - Add to backend: `openai`
 
 **If Claude (Anthropic):**
+
 - Add to backend: `@anthropic-ai/sdk`
 
 **If Gemini:**
+
 - Add to backend: `@google/generative-ai`
 
 **If Mistral:**
+
 - Add to backend: `@mistralai/mistralai`
 
 **If multiple providers:** add all relevant packages.
@@ -178,6 +199,7 @@ grep -r "@starter/" /path/to/project --include="*.json" --include="*.js" --inclu
 ```
 
 Files to update:
+
 - `packages/eslint-config/package.json`
 - `packages/prettier-config/package.json`
 - `packages/shared/package.json`
@@ -204,11 +226,13 @@ Files to update:
 ## Step 6: GitHub setup
 
 Via MCP github tools (using owner/repo from Step 1):
+
 1. Create milestones: "Phase 1 — Foundation", "Phase 2 — MVP", "Phase 3 — Polish"
 2. Create 3-5 Phase 1 issues based on `docs/PRODUCT_DESIGN.md`
 3. Each issue: assign to owner, add labels `type: feature` + `phase: 1`
 
 Remind user:
+
 ```
 Run: GITHUB_TOKEN=xxx GITHUB_REPOSITORY=<owner>/<repo> bash .github/setup-github.sh
 ```
@@ -223,6 +247,7 @@ git push origin develop
 ## Step 8: Confirm
 
 Print a full summary:
+
 ```
 ✅ Project initialized: <name>
 ✅ Stack: <frontend> + <backend> + <database>

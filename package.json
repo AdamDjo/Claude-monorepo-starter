@@ -7,6 +7,8 @@
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "prepare": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "knip": "knip",
     "test": "turbo test",
     "test:e2e": "turbo test:e2e"
@@ -18,6 +20,7 @@
     "husky": "^9",
     "knip": "^6",
     "lint-staged": "^17",
+    "prettier": "^3.4.0",
     "turbo": "^2.9.12"
   }
 }

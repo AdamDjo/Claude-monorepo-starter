@@ -12,7 +12,7 @@ Exécuter dans l'ordre :
 
 1. **Créer l'issue GitHub**
    - Demander : "Décris le problème en production en une phrase"
-   - Créer l'issue via mcp__github__create_issue avec :
+   - Créer l'issue via mcp**github**create_issue avec :
      - owner et repo lus depuis MEMORY.md
      - title: "hotfix: <description>"
      - labels: ["type: bug", "priority: high"]

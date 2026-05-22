@@ -15,12 +15,14 @@
 <!-- Updated by "go new-project" and maintained each session -->
 
 ### Stack
+
 - Frontend: Next.js 15 (App Router) + TypeScript + Tailwind CSS
 - Backend: Express + TypeScript
 - Database: Supabase
 - AI: <!-- add providers here -->
 
 ### GitHub
+
 - Scrum Board PROJECT_ID: `<PROJECT_ID>` <!-- set after creating project board -->
 - Labels: created via `.github/setup-github.sh`
 - Milestones: Phase 1 / Phase 2 / Phase 3
@@ -30,6 +32,7 @@
 ## Timeline
 
 <!-- Key decisions and events -->
+
 - [ ] Project initialized with "go new-project"
 - [ ] GitHub labels and milestones configured
 - [ ] Renovate installed
@@ -55,6 +58,7 @@
 ## Next Steps
 
 <!-- What to do next session -->
+
 1. Run "go new-project" to initialize the project
 2. Configure GitHub labels: `GITHUB_TOKEN=xxx bash .github/setup-github.sh`
 3. Install Renovate: https://github.com/apps/renovate

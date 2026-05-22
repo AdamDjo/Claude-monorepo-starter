@@ -8,7 +8,7 @@ Closes #<!-- issue number -->
 
 ## Type of change
 
-- [ ] New feature (phase: ___)
+- [ ] New feature (phase: \_\_\_)
 - [ ] Bug fix
 - [ ] Refactoring (no behavior change)
 - [ ] Chore / Tooling / Config

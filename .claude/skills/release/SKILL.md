@@ -15,22 +15,26 @@ Exécuter dans l'ordre :
    - Si format invalide, afficher une erreur et arrêter
 
 2. **Vérifier que develop est propre**
+
    ```bash
    git status --short
    ```
 
 3. **Mettre develop à jour**
+
    ```bash
    git checkout develop && git pull origin develop
    ```
 
 4. **Créer et pousser la branche release**
+
    ```bash
    git checkout -b release/<version>
    git push origin release/<version>
    ```
 
 5. **Confirmer :**
+
    ```
    ✅ release/<version> créée et poussée
 
