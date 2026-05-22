@@ -1,11 +1,14 @@
 import type { NextFunction, Request, Response } from 'express'
 
-// Extend Express Request to carry the authenticated user
-declare global {
-  namespace Express {
-    interface Request {
-      user?: { id: string; email: string }
-    }
+export interface AuthenticatedUser {
+  id: string
+  email: string
+}
+
+// Augment Express Request to carry the authenticated user
+declare module 'express-serve-static-core' {
+  interface Request {
+    user?: AuthenticatedUser
   }
 }
 

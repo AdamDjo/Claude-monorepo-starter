@@ -1,6 +1,12 @@
 import type { ErrorRequestHandler } from 'express'
 
-export const errorMiddleware: ErrorRequestHandler = (err, _req, res, _next) => {
+interface HttpError {
+  status?: number
+  statusCode?: number
+  message?: string
+}
+
+export const errorMiddleware: ErrorRequestHandler = (err: HttpError, _req, res, _next) => {
   const status = err.status ?? err.statusCode ?? 500
   const message = err.message ?? 'Internal server error'
 
