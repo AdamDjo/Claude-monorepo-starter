@@ -188,6 +188,7 @@ Creates `release/1.0.0`, triggers CI, creates the GitHub Release and tag automat
 | `/implement <description>` | Full implementation workflow (plan → code → verify) |
 | `/status` | Show current phase, next tasks, recent commits |
 | `/check` | Run type-check + lint across the whole monorepo |
+| `/docs` | Update `MEMORY.md` + `ARCHITECTURE.md` from current code |
 
 ---
 

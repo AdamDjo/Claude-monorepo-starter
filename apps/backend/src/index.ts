@@ -2,6 +2,8 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import express, { type Express } from 'express'
 
+import { errorMiddleware } from './middleware/error.middleware'
+
 dotenv.config()
 
 const app: Express = express()
@@ -19,8 +21,11 @@ app.use(express.json())
 // app.use('/api/users', userRoutes)
 
 app.get('/api/health', (_req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() })
+  res.json({ success: true, data: { status: 'ok', timestamp: new Date().toISOString() } })
 })
+
+// Global error handler — must be last
+app.use(errorMiddleware)
 
 app.listen(PORT, () => {
   console.info(`Backend running on http://localhost:${PORT}`)

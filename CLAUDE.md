@@ -215,6 +215,10 @@ release/<semver>
 - `/pr` → push branch + open PR with correct labels
 - `/release <version>` → create release branch (triggers CI)
 - `/sync` → sync develop with main after hotfix/release
+- `/docs` → update MEMORY.md + ARCHITECTURE.md from current code state
+- `/implement <description>` → full implementation workflow
+- `/check` → run lint + type-check across the monorepo
+- `/status` → show current phase, branch, next tasks
 
 ### Labels (created by setup-github.sh)
 
